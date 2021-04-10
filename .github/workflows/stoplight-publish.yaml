@@ -1,0 +1,11 @@
+name: stoplight-publish
+on: [push]
+jobs:
+  publish-to-stoplight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - run: npx @stoplight/cli@5 push --ci-token 48295d25-fe51-49ed-a361-8b60d560ad76
