@@ -180,6 +180,8 @@ components:
           type: string
           format: date
           description: The date that the user was created.
+        my_change:
+          type: string
       required:
         - id
         - firstName
